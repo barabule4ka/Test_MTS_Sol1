@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Design;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -8,27 +7,64 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-           // Task1();
+            Task1();
             Task2();
             Task3();
             Task4();
         }
 
 
-      /*  public static void Task1()
+        public static void Task1()
         {
-            *Напишите программу - консольный калькулятор.
-            *Создайте две переменные с именами operand1 и operand2.
-            *Задайте переменным некоторые произвольные значения.
+            /*Напишите программу - консольный калькулятор.
+            * Создайте две переменные с именами operand1 и operand2.
+            * Задайте переменным некоторые произвольные значения.
             *Предложите пользователю ввести знак арифметической операции.
-            *Примите значение, введенное пользователем, и поместите его в строковую переменную sign.
+            * Примите значение, введенное пользователем, и поместите его в строковую переменную sign.
             *Для организации выбора алгоритма вычислительного процесса, используйте переключатель switch.
-            *Выведите на экран результат выполнения арифметической операции.
+            * Выведите на экран результат выполнения арифметической операции.
             **В случае использования операции деления, организуйте проверку попытки деления на ноль.
-            *И если таковая имеется, то отмените выполнение арифметической операции и уведомите об ошибке пользователя.*
+            * И если таковая имеется, то отмените выполнение арифметической операции и уведомите об ошибке пользователя.*/
 
-        }*/
+            double operand1 = 4.56;
+            double operand2 = 0;
+            double result = 0;
+            Console.WriteLine("Еnter any math operation sign (+-*/)");
+            string sign = Console.ReadLine();
+            
+            switch (sign)
+            {
+                case "+":
+                    result = (operand1 + operand2);
+                    Console.WriteLine($"{operand1} + {operand2} = {result}");
+                    break;
+                case "-":
+                    result = operand1 - operand2;
+                    Console.WriteLine($"{operand1} - {operand2} = {result}");
+                    break;
+                case "*":
+                    result = operand1 * operand2;
+                    Console.WriteLine($"{operand1} * {operand2} = {result}");
+                    break;
+                case "/":
+                    if (operand2 == 0)
+                    {
+                        Console.WriteLine("Сannot divide by 0");
+                    }
+                    else
+                    {
+                        result = operand1 / operand2;
+                        Console.WriteLine($"{operand1} / {operand2} = {result}");
+                    };
+                    break;
+                default:
+                    Console.WriteLine("ooops! error");
+                break;
 
+            }
+
+
+        }
 
         public static void Task2()
         {
@@ -36,20 +72,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
             *в числовой промежуток [0 - 14] [15 - 35] [36 - 50][50 - 100].
             *Если да, то укажите, в какой именно промежуток.
             *Если пользователь указывает число, не входящее ни в один из имеющихся числовых промежутков, 
-            *то выводится соответствующее сообщение.
-            НЕ ДОБАВЛЯЮ ПРОВЕРКУ НЕ НА ЧИСЛА
-             */
+            *то выводится соответствующее сообщение.*/
 
             Console.WriteLine("Please, enter any number from 0 to 100");
-            
-            double number = Convert.ToDouble(Console.ReadLine());
 
-            if ((number >= 0) && (number <= 14))
+            string numberStr = Console.ReadLine();
+            bool numberBool = double.TryParse(numberStr, out double number);
+
+            if (numberBool != true)
+            {
+                Console.WriteLine("Only numbers required.");
+            }
+            else if ((number >= 0) && (number <= 14))
             {
                 Console.WriteLine($"Number {number} is in interval [0-14]");
             }
             else if ((number >= 15) && (number <= 35))
-            { 
+            {
                 Console.WriteLine($"Number {number} is in interval [15-35]");
             }
             else if ((number >= 36) && (number < 50))
@@ -72,7 +111,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
 
 
-       public static void Task3()
+        public static void Task3()
         {
             /*Напишите программу русско-английский переводчик.
             *Программа знает 10 слов о погоде.
@@ -153,4 +192,4 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
     }
-}
+} 
