@@ -9,7 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
 
            // Task1();
-          //  Task2();
+            Task2();
             Task3();
             Task4();
         }
@@ -27,21 +27,52 @@ namespace MyApp // Note: actual namespace depends on the project name.
             **В случае использования операции деления, организуйте проверку попытки деления на ноль.
             *И если таковая имеется, то отмените выполнение арифметической операции и уведомите об ошибке пользователя.*
 
-        }
+        }*/
 
 
         public static void Task2()
         {
-            *Напишите программу определения, попадает ли указанное пользователем число от 0 до 100 
+            /*Напишите программу определения, попадает ли указанное пользователем число от 0 до 100 
             *в числовой промежуток [0 - 14] [15 - 35] [36 - 50][50 - 100].
             *Если да, то укажите, в какой именно промежуток.
             *Если пользователь указывает число, не входящее ни в один из имеющихся числовых промежутков, 
-            *то выводится соответствующее сообщение.*
+            *то выводится соответствующее сообщение.
+            НЕ ДОБАВЛЯЮ ПРОВЕРКУ НЕ НА ЧИСЛА
+             */
 
-        }*/
+            Console.WriteLine("Please, enter any number from 0 to 100");
+            
+            double number = Convert.ToDouble(Console.ReadLine());
+
+            if ((number >= 0) && (number <= 14))
+            {
+                Console.WriteLine($"Number {number} is in interval [0-14]");
+            }
+            else if ((number >= 15) && (number <= 35))
+            { 
+                Console.WriteLine($"Number {number} is in interval [15-35]");
+            }
+            else if ((number >= 36) && (number < 50))
+            {
+                Console.WriteLine($"Number {number} is in interval [36-50]");
+            }
+            else if ((number > 50) && (number <= 100))
+            {
+                Console.WriteLine($"Number {number} is in interval [50-100]");
+            }
+            else if (number == 50)
+            {
+                Console.WriteLine($"Number {number} is in intervals [36-50] and [50-100]");
+            }
+            else
+            {
+                Console.WriteLine("No intervals found");
+            }
+
+        }
 
 
-        public static void Task3()
+       public static void Task3()
         {
             /*Напишите программу русско-английский переводчик.
             *Программа знает 10 слов о погоде.
@@ -104,7 +135,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             if (numberBool != true)
             {
-                Console.WriteLine("Not integer");
+                Console.WriteLine("Sorry, only integers required. Try again");
             }
             else if (number % 2 == 0)
             {
