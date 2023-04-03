@@ -6,13 +6,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-
             Task1();
             Task2();
             Task3();
             Task4();
         }
-
 
         public static void Task1()
         {
@@ -60,10 +58,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 default:
                     Console.WriteLine("ooops! error");
                 break;
-
             }
-
-
         }
 
         public static void Task2()
@@ -107,9 +102,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine("No intervals found");
             }
-
         }
-
 
         public static void Task3()
         {
@@ -162,7 +155,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
 
-
         public static void Task4()
         {
             //Напишите программу, которая будет выполнять проверку чисел на четность.
@@ -184,12 +176,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine(number + " is odd (nechetnoe)");
             }
-
-
-
-
         }
-
-
     }
-} 
+}
