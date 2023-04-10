@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlTypes;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -9,6 +10,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Task1();
             Task2();
             Task3();
+            Task4();
+            Task5();
+            Task6();
         }
 
         /// <summary>
@@ -55,11 +59,74 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             string strBasic = "teamwithsomeofexcersicesabcwanttomakeitbetter";
             string strFormat = strBasic.Replace("abc", " ");
+
             string[] array = strFormat.Split(new char[] { ' ' });
+
             string firstPart = array[0];
             string secondPart = array[1];
 
             Console.WriteLine($"firstPart is: {firstPart} \n\rsecondPart is: {secondPart}");
+        }
+
+        /// <summary>
+        /// 4. Дана строка: Good day
+        /// Необходимо с помощью метода substring удалить слово "Good". 
+        /// После чего необходимо используя команду insert создать строку со значением: The best day!!!!!!!!!.
+        /// Заменить последний "!" на "?" и вывести результат на консоль.
+        /// </summary>
+        public static void Task4()
+        {
+            string strBasic = "Good day";
+            string strNewString = "The best ";
+
+            Console.WriteLine(strBasic.Substring(5, 3).Insert(0, strNewString).Insert(12, "!!!!!!!!!").Substring(0, 20) + "?");
+        }
+
+        /// <summary>
+        /// 5. Введите с консоли строку, которая будет содержать буквы и цифры. 
+        /// Удалите из исходной строки все цифры и выведите их на экран.(Использовать метод Char.IsDigit(), 
+        /// его не разбирали на уроке, посмотрите, пожалуйста, документацию этого метода самостоятельно)
+        /// </summary>
+        public static void Task5()
+        {
+            string strBasic = Console.ReadLine();
+            char[] array = strBasic.ToCharArray();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (char.IsDigit(array[i])) {
+                    Console.Write(array[i]);
+                }
+            }
+
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// 6. Задайте 2 предложения из консоли. 
+        /// Для каждого слова первого предложения определите количество его вхождений во второе предложение.
+        /// </summary>
+        public static void Task6()
+        {
+            string strBasic1 = Console.ReadLine();
+            string strBasic2 = Console.ReadLine();
+
+            string[] arrayBasic1 = strBasic1.Split(" ");
+            string[] arrayBasic2 = strBasic2.Split(" ");
+
+            for (int i = 0; i < arrayBasic2.Length; i++)
+            {
+                int count = 0;
+                for (int j = 0; j < arrayBasic1.Length; j++)
+                {
+                    if (arrayBasic1[j] == arrayBasic2[i])
+                    {
+                        count++;
+                    }
+                }
+
+                Console.WriteLine($"Number of repetitions for a word \"{arrayBasic2[i]}\" - {count}") ;
+            }
         }
     }
 }
