@@ -57,6 +57,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         /// </summary>
         public static void Task3()
         {
+            Console.WriteLine("Basic string - teamwithsomeofexcersicesabcwanttomakeitbetter");
+
             string strBasic = "teamwithsomeofexcersicesabcwanttomakeitbetter";
             string strFormat = strBasic.Replace("abc", " ");
 
@@ -76,6 +78,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         /// </summary>
         public static void Task4()
         {
+            Console.WriteLine("Basic string - Good day");
+
             string strBasic = "Good day";
             string strNewString = "The best ";
 
@@ -89,6 +93,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         /// </summary>
         public static void Task5()
         {
+            Console.WriteLine("Enter any numbers and letters");
+
             string strBasic = Console.ReadLine();
             char[] array = strBasic.ToCharArray();
 
@@ -108,24 +114,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
         /// </summary>
         public static void Task6()
         {
+            Console.WriteLine("Enter first sentence");
             string strBasic1 = Console.ReadLine();
+
+            Console.WriteLine("Enter second sentence");
             string strBasic2 = Console.ReadLine();
 
             string[] arrayBasic1 = strBasic1.Split(" ");
             string[] arrayBasic2 = strBasic2.Split(" ");
 
-            for (int i = 0; i < arrayBasic2.Length; i++)
+            for (int i = 0; i < arrayBasic1.Length; i++)
             {
                 int count = 0;
-                for (int j = 0; j < arrayBasic1.Length; j++)
+                for (int j = 0; j < arrayBasic2.Length; j++)
                 {
-                    if (arrayBasic1[j] == arrayBasic2[i])
+                    if (arrayBasic1[i] == arrayBasic2[j])
                     {
                         count++;
                     }
                 }
 
-                Console.WriteLine($"Number of repetitions for a word \"{arrayBasic2[i]}\" - {count}") ;
+                Console.WriteLine($"Number of repetitions for a word \"{arrayBasic1[i]}\" - {count}") ;
             }
         }
     }
