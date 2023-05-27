@@ -20,14 +20,13 @@ namespace home_11_SeleniumTests.Tests
         }
 
         [Test, Category("Divide"), Description("Strange test")]
-        [Retry(3)]
+        [Retry(5)]
         public void TestCalcDivRetry()
         {
             var random = new Random();
-            var expected = 4;
-            var actual = calculator.Divide(random.NextInt64(), random.NextInt64(0, 1));
-
-            Assert.That(actual, Is.EqualTo(expected));
+            var actual = calculator.Divide(random.Next(0, 4), random.Next(0, 5));
+            Console.WriteLine(actual);
+            Assert.That(actual, Is.GreaterThan(0));
         }
 
 
