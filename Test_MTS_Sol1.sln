@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "home_7", "home_7\home_7.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "home_8", "home_8\home_8.csproj", "{D976D056-9389-409D-A1F0-E1D4649D056D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "home_9", "home_9\home_9.csproj", "{A42EF89A-CBBF-4424-8ECF-CB116ADE64BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "home_9", "home_9\home_9.csproj", "{A42EF89A-CBBF-4424-8ECF-CB116ADE64BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTests_1", "SeleniumTests_1\SeleniumTests_1.csproj", "{E218DC1D-DBB3-4A84-940F-09C7B9798C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{8F712470-852B-4C90-B269-53037364190E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{A42EF89A-CBBF-4424-8ECF-CB116ADE64BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42EF89A-CBBF-4424-8ECF-CB116ADE64BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42EF89A-CBBF-4424-8ECF-CB116ADE64BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E218DC1D-DBB3-4A84-940F-09C7B9798C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E218DC1D-DBB3-4A84-940F-09C7B9798C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E218DC1D-DBB3-4A84-940F-09C7B9798C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E218DC1D-DBB3-4A84-940F-09C7B9798C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F712470-852B-4C90-B269-53037364190E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F712470-852B-4C90-B269-53037364190E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F712470-852B-4C90-B269-53037364190E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F712470-852B-4C90-B269-53037364190E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
